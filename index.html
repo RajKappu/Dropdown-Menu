@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Change Font Style by Option
+        Dropdown Javascript
+    </title>
+    
+</head>
+<body style="text-align: center;">
+
+    <div id="title">
+        <h1>
+            Font Drop Down Menu
+        </h1>
+    </div>
+
+    <h4 style="color: darkgrey;">select font</h>
+    <select id="input-font" class="input"
+        onchange="changeFontStyle (this);"> 
+  
+        <option value="Times New Roman" 
+            selected="selected"> 
+            Times New Roman 
+        </option> 
+        <option value="Arial">Arial</option> 
+        <option value="fantasy">Fantasy</option> 
+        <option value="cursive">cursive</option>
+        <option value="Cambria Math">Cambria Math</option> 
+    </select>
+
+    <h5 style="color: darkgrey;">select size</h>
+    <select id="input-font-size" class="input"
+        onchange="changeFontSize (this);"> 
+  
+        <option value="30px" 
+            selected="selected"> 
+             30px
+        </option> 
+        <option value="35px">35px</option> 
+        <option value="40px">40px</option> 
+        <option value="60px">60px</option>
+        <option value="55px">
+            55px
+        </option> 
+    </select>
+
+    <h5 style="color: darkgrey;">select color</h>
+    <select id="input-font-color" class="input"
+        onchange="changeFontColor (this);"> 
+  
+        <option value="black" 
+            selected="selected"> 
+             black
+        </option> 
+        <option value="green">green</option> 
+        <option value="blue">blue</option> 
+        <option value="red">red</option>
+        <option value="yellow">yellow</option> 
+    </select>
+
+    <script>
+
+        let h1 = document.getElementById("title");
+        h1.style.color="green";
+
+       let changeFontSize = function(font){
+        document.getElementById("title")
+        .style.fontSize
+         = font.value;
+       }
+
+       let changeFontStyle = function(font){
+        document.getElementById("title")
+        .style.fontFamily
+         = font.value;
+       }
+
+       let changeFontColor = function(font){
+        document.getElementById("title")
+        .style.color
+         = font.value;
+       }
+
+       
+       
+    </script>
+</body>
+</html>
